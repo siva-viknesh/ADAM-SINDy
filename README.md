@@ -58,29 +58,6 @@ ADAM-SINDy consistently recovers correct governing equations while maintaining s
 
 ---
 
-## 🏗️ Method Summary
-
-We solve:
-
-\[
-\dot{X} = \Theta(X; \theta)\,\Xi
-\]
-
-where:
-- \( \Theta(X; \theta) \): candidate library with trainable nonlinear parameters  
-- \( \Xi \): sparse coefficients  
-
-### Optimization
-
-\[
-\min_{\Xi, \theta, \Gamma} \; \| \dot{X} - \Theta(X; \theta)\Xi \|_2^2 + \lambda \| |\Gamma|\Xi \|_1
-\]
-
-- All parameters are optimized jointly  
-- Implemented in PyTorch using ADAM  
-
----
-
 ## 🧰 Features
 
 - End-to-end differentiable pipeline  
@@ -97,8 +74,8 @@ where:
 - Fluid dynamics  
 - Chemical kinetics  
 - Biological systems  
-- Control and system identification  
-
+- Control and system identification
+  
 ---
 
 ## 📚 Citation
