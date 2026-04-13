@@ -41,13 +41,14 @@ Observed Time-Series Data:  x(t)
      │  Parameterized Library      │   Θ(x; α) — candidate functions with
      │  Construction               │   trainable nonlinear parameters α
      └────────┬────────────────────┘
-              │                             ┌─────────────────────────┐
+              │                             ┌──────────────────────────┐
      ┌────────▼────────────────────┐        │  Nonlinear Parameters α  │
      │  ADAM Optimization Loop     │◄───────│  (frequencies, exponents,│
-     │                             │        │   bandwidths, etc.)       │
-     │   min  ‖ẋ − Θ(x;α)·ξ‖²    │        └─────────────────────────┘
-     │    α,ξ  + λ‖ξ‖₁            │◄───────┌─────────────────────────┐
+     │                             │        │   bandwidths, etc.)      │
+     │   min  ‖ẋ − Θ(x;α)·ξ‖²      │        └──────────────────────────┘
+     │  α,ξ,Γ          + λ‖Γ·ξ‖₁   │◄───────┌─────────────────────────┐
      └────────┬────────────────────┘        │  Sparse Coefficients ξ  │
+              │                             │  Candidate Sparsity  Γ  │
               │                             └─────────────────────────┘
      ┌────────▼────────────────────┐
      │  Sparsification             │   Sequential thresholding to enforce
@@ -68,8 +69,8 @@ ADAM-SINDy is validated across a broad spectrum of dynamical systems:
 
 | Category | System | Nonlinear Parameter |
 |---|---|---|
-| **Nonlinear Oscillators** | Duffing, Van der Pol, coupled oscillators | Polynomial exponents, frequency |
-| **Chaotic Fluid Flows** | Lorenz system, chaotic ODE models | Nonlinear coupling terms |
+| **Nonlinear Oscillators** | Harmonic, Van der Pol oscillators | Polynomial exponents, frequency |
+| **Chaotic Fluid Flows** | ABC flow system | Nonlinear coupling terms |
 | **Reaction Kinetics** | Nonlinear chemical reaction networks | Reaction rate exponents |
 | **Pharmacokinetics** | Drug absorption and elimination dynamics | Exponential bandwidths |
 | **Nonlinear PDEs** | Wildfire convection–diffusion–reaction transport | Nonlinear source term parameters |
