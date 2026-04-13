@@ -2,9 +2,8 @@
 
 <p align="center">
   <a href="https://doi.org/10.1103/dwkk-5g2h"><img src="https://img.shields.io/badge/Phys.Rev.Research-013040-blue.svg" alt="Journal"></a>
-  <a href="https://arxiv.org/abs/2410.16528"><img src="https://img.shields.io/badge/arXiv-2410.16528-b31b1b.svg" alt="arXiv"></a>
   <a href="https://github.com/siva-viknesh/ADAM-SINDy"><img src="https://img.shields.io/badge/GitHub-ADAM--SINDy-blue?logo=github" alt="GitHub"></a>
-  <img src="https://img.shields.io/badge/NumPy-Framework-013243?logo=numpy" alt="NumPy">
+  <img src="https://img.shields.io/badge/PyTorch-Framework-orange?logo=pytorch" alt="PyTorch">
   <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
 </p>
 
